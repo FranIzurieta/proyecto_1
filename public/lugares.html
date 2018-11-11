@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de lugares</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <h1>Lista de lugares</h1>
+    <div>
+        <label for="filtro_lugar">Filtrar</label>
+        <input type="text" id="filtro_lugar">
+    </div>
+    <table id="tabla_libros">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Categoria</th>
+                <th>Etiquetas</th>
+                <th>Provincia</th>
+                <th>Cantón</th>
+                <th>Distrito</th>
+                <th>Señas</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="js/lugares/jquery-3.3.1.js"></script>
+    <script src="js/lugares/servicio_lugares.js"></script>
+    <script src="js/lugares/controlador_listar_lugares.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!-- 
+    <label for="">Filtrar</label>
+    <input type="text" id="txt_filtrar">
+    <table id="tbl_categorias" class="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+                
+        </tbody>
+    </table> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/generales.css">
+    <title>Categorías</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="usuarios.html">Usuarios</a>
+            <a href="lugares.html">Lugares</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="patrocinadores.html">Patrocinadores</a>
+            <a href="industrias.html">Industrias</a>
+            <a href="categorias.html" class="active">Categorías</a>
+            <a href="reportes.html">Reportes</a>
+            <a href="bitacora.html">Bitácora</a>
+        </nav>
+        <!-- <input type="text" class="input_buscador" placeholder="Buscar"> -->
+        <p id="msg_bienvenido">Bienvenido, <span id="usuario">Jhonny</span></p>
+        <div class="dropdown">
+            <i class="fas fa-chevron-down" id="dropdown_btn"></i>
+            <div class="dropdown_content" id="my_dropdown">
+                <a href="perfil.html">Perfil</a>
+                <a href="cambiar_contrasena.html">Cambiar contraseña</a>
+                <a href="">Cerrar sesión</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <section class="contenido">
+        <h1>Categorías</h1>
+
+        <!-- Información adicional -->
+        <div class="info_adicional">
+            <div class="caja_info">
+                <p class="titulo">Total: <span class="resultado" id="total"></span></p>
+            </div>
+            <div class="caja_info">
+                <p>Habilitados: <span class="resultado" id="total_habilitados"></span></p>
+            </div>
+            <div class="caja_info">
+                <p>Deshabilitados: <span class="resultado" id="total_deshabilitados"></span></p>
+            </div>
+        </div>
+        <!-- //Información adicional -->
+
+        <div class="filtros">
+            <input type="text" id="txt_filtro" class="input_filtro" placeholder="Buscar categoria">
+            <div class="checkbox">
+                <input type="checkbox" id="txt_deshabilitados">
+                <label for="txt_deshabilitados">Mostrar categorias deshabilitadas</label>
+            </div>
+            <a href="registrar_categoria.html" class="btn_agregar">Agregar</a>
+        </div>
+
+        <table class="table" id="tbl_categorias">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Scripts -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/categorias/servicio.js"></script>
+    <script src="js/categorias/controlador_listar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

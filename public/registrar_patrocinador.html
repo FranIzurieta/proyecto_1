@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/generales.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <title>Registrar patrocinador</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="usuarios.html">Usuarios</a>
+            <a href="lugares.html">Lugares</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="patrocinadores.html" class="active">Patrocinadores</a>
+            <a href="industrias.html">Industrias</a>
+            <a href="categorias.html">Categorías</a>
+            <a href="reportes.html">Reportes</a>
+            <a href="bitacora.html">Bitácora</a>
+        </nav>
+        <!-- <input type="text" class="input_buscador" placeholder="Buscar"> -->
+        <p id="msg_bienvenido">Bienvenido, <span id="usuario">Jhonny</span></p>
+        <div class="dropdown">
+            <i class="fas fa-chevron-down" id="dropdown_btn"></i>
+            <div class="dropdown_content" id="my_dropdown">
+                <a href="perfil.html">Perfil</a>
+                <a href="cambiar_contrasena.html">Cambiar contraseña</a>
+                <a href="">Cerrar sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="contenido">
+        <h1>Registrar patrocinador</h1>
+
+        <form id="formulario_registro" class="form">
+            <div class="form_control">
+                <label for="txt_nombre">Nombre</label>
+                <input type="text" name="nombre" class="form_input" id="txt_nombre">
+            </div>
+            <p class="form_mensaje ocultar" id="msg_existe"></p>
+            <div class="form_control">
+                <label for="txt_industria">Industria</label>
+                <select name="industria" class="form_input" id="txt_industria">
+                    <option value="" selected disabled>Seleccionar industria</option>
+                </select>
+            </div>
+            <div class="form_control">
+                <label for="txt_logo">Logo</label>
+                <button type="button" class="form_input" id="btn_subirFoto">Seleccionar imagen</button>
+                <input type="file" id="input_subirFoto" hidden>
+            </div>
+            <div class="form_control">
+                <label for=""></label>
+                <img src="" alt="Logo patrocinador" id="logo_patrocinador">
+            </div>
+            <p class="form_mensaje ocultar" id="msg_campos">Por favor complete correctamente todos los campos marcados</p>
+            <div class="form_botones">
+                <button type="button" class="btn btn_registrar" id="btn_registrar">Registrar</button>
+                <button type="button" class="btn btn_registrar" id="btn_cancelar">Cancelar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Scripts -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.11/dist/sweetalert2.all.min.js"></script>
+    <script src="js/patrocinadores/servicio.js"></script>
+    <script src="js/patrocinadores/controlador_registrar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* Generales */
+.form {
+    align-items: start;
+    /* background: lightblue; */
+}
+
+.form.form_columnas {
+    display: flex;
+    align-items: start;
+    /* background: lightblue; */
+}
+
+.form .col_izq {
+    /* background: lightblue; */
+}
+
+.form .col_der {
+    /* background: lightcyan; */
+}
+
+.form_control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form_control.ocultar {
+    display: none;
+}
+
+.form_botones {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    padding-left: 180px;
+}
+
+.form_botones.ocultar {
+    display: none;
+}
+
+.form_botones .btn {
+    background: gray;
+    border: 0;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    width: 113px;
+    padding: 10px 0;
+    margin-right: 10px;
+}
+
+.form_botones .btn:last-child {
+    margin-right: 0px;
+}
+
+.form_control label {
+    text-align: right;
+    width: 170px;
+    margin-right: 10px;
+    /* background: pink; */
+}
+
+.form_control #logo_patrocinador {
+    width: 236px;
+    height: 236px;
+    display: block;
+    border: 1px solid lightgray;
+    display: none;
+}
+
+.form_control input[type=text].form_input,
+.form_control input[type=number].form_input {
+    padding: 0;
+    font-size: 14px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    text-indent: 5px;
+    height: 23px;
+    width: 234px;
+}
+
+.form_control select.form_input {
+    font-size: 14px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    height: 25px;
+    width: 236px;
+}
+
+.form_control button.form_input {
+    font-size: 14px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    height: 25px;
+    width: 236px;
+}
+
+.form_control button.form_input:hover {
+    background: gray;
+    cursor: pointer;
+    color: #fff;
+}
+
+.form_control input[type=date].input_date {
+    width: 234px;
+    height: 23px;
+}
+
+.form_control textarea {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 14px;
+    min-width: 230px;
+    max-width: 230px;
+    min-height: 89px;
+    max-height: 89px;
+}
+
+.form_radio {
+    font-size: 14px;
+}
+
+/* Mensajes de validación */
+.border_error {
+    border-bottom: 2px solid red !important;
+}
+
+.form_mensaje {
+    font-size: 12px;
+    margin-left: 180px;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.ocultar {
+    display: none;
+}

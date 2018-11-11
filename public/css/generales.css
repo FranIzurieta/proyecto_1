@@ -1,0 +1,330 @@
+/* @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+body {
+    width: 1280px;
+    margin: 0 auto;
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    color: #1f2833;
+}
+
+header {
+    background: gray;
+    background: #6EA43E;
+    display: flex;
+    align-items: center;
+}
+
+/* Navegación */
+header nav {
+    display: flex;
+    margin-right: 20px;
+}
+
+header nav a {
+    padding: 16px 10px;
+    font-size: 14px;
+}
+
+header nav a:hover,
+.active {
+    background: lightgray;
+    background: #5a8532;
+    color: #fff;
+    /* background: #ff8944; */
+}
+
+.input_buscador {
+    width: 300px;
+    font-size: 14px;
+    height: 30px;
+    border: 0;
+    text-indent: 5px;
+}
+
+#msg_bienvenido {
+    font-size: 14px;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.dropdown {
+    overflow: hidden;
+}
+
+.dropdown #dropdown_btn {
+    font-size: 18px;
+    border: 0;
+    cursor: pointer;
+    background: #5e5e5e;
+    background: #6EA43E;
+    background: #5a8532;
+    padding: 14px 20px;
+}
+
+.dropdown .dropdown_content {
+    display: none;
+    position: absolute;
+    background: gray;
+    top: 46px;
+    right: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dropdown .dropdown_content a {
+    display: block;
+    padding: 10px 10px;
+    user-select: none;
+}
+
+.dropdown .dropdown_content a:hover {
+    background: #5e5e5e;
+}
+/* Fin: Navegación */
+
+/* Contenido */
+.contenido {
+    padding: 30px;
+    /* height: 902px; */
+    overflow: hidden;
+    /* background: pink; */
+    /* height: 644px; */
+}
+
+.contenido h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+/* Fin: Contenido */
+
+/* Filtros */
+.filtros {
+    background: lightgray;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.filtros .form_control {
+    margin: 0;
+}
+
+.filtros .input_filtro {
+    padding: 0;
+    font-size: 14px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    text-indent: 5px;
+    height: 28px;
+    width: 234px;
+    margin-right: 20px;
+}
+
+.filtros .btn_agregar {
+    margin-left: auto;
+    display: block;
+    width: 120px;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 2px;
+    background: gray;
+    color: #fff;
+    font-size: 14px;
+}
+
+.filtros .checkbox,
+.filtros .filtro_fecha {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.filtros .checkbox input[type=checkbox] {
+    margin-right: 5px;
+}
+
+.filtros .form_control select.form_input {
+    font-size: 14px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    height: 30px;
+    width: 110px;
+    margin-right: 10px;
+}
+
+.filtros .filtro_fecha label {
+    margin-right: 10px;
+}
+
+.filtros .filtro_fecha label:nth-child(3) {
+    margin-left: 10px;
+}
+
+input[type=date].input_date {
+    padding: 0;
+    font-size: 14px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    /* text-align: center; */
+    text-indent: 5px;
+    height: 28px;
+    width: 135px;
+    position: relative;
+}
+
+.input_date::-webkit-clear-button,
+.input_date::-webkit-inner-spin-button {
+    display: none;
+}
+
+.input_date::-webkit-calendar-picker-indicator {
+    /* background: pink;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 100%;
+    cursor: pointer; */
+    color: transparent;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    width: 20px;
+    height: 100%;
+}
+
+.input_date::before {
+    color: transparent;
+    display: block;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f073';
+    position: absolute;
+    right: 0px;
+    color: #999;
+    width: 30px;
+    text-align: center;
+}
+/* Fin: Filtros */
+
+/* Tabla */
+.table {
+    display: inline-block;
+    height: 418px;
+    overflow: scroll;
+}
+
+.table thead th:first-child {
+    border-top-left-radius: 2px;
+}
+
+.table thead th:last-child {
+    border-top-right-radius: 2px;
+}
+
+.table thead th,
+.table tbody td {
+    font-size: 14px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.table thead th {
+    background: lightgray;
+    padding: 10px;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    padding: 5px 10px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid lightgray;
+}
+
+.table .logo {
+    display: block;
+    height: 40px;
+}
+
+.table .td_acciones {
+    text-align: center;
+}
+
+.table .td_acciones .btn_accion:hover {
+    background: #636363;
+}
+
+.table .td_acciones .btn_accion:last-child {
+    margin-right: 0px;
+}
+
+.btn_accion {
+    margin-right: 5px;
+    padding: 6px 0;
+}
+
+.btn_deshabilitar,
+.btn_vetar,
+.btn_quitarVeto {
+    background: gray;
+    width: 90px;
+    border: 0;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.btn_editar,
+.btn_eliminar {
+    background: gray;
+    width: 35px;
+    border: 0;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+}
+/* Fin: Tabla */
+
+.modal {
+    margin-top: 100px;
+}
+
+/* Información adicional */
+.info_adicional {
+    /* background: lightblue; */
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.info_adicional .caja_info {
+    /* background: pink; */
+    padding: 5px 8px;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+    border: 2px solid gray;
+    margin-right: 15px;
+}
+
+.info_adicional .caja_info:last-child {
+    margin-right: 0px;
+}
+
+.info_adicional .caja_info .resultado {
+    font-weight: 700;
+    margin-top: 5px;
+}
+

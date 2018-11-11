@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/generales.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <title>Registrar usuario</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="usuarios.html" class="active">Usuarios</a>
+            <a href="lugares.html">Lugares</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="patrocinadores.html">Patrocinadores</a>
+            <a href="industrias.html">Industrias</a>
+            <a href="categorias.html">Categorías</a>
+            <a href="reportes.html">Reportes</a>
+            <a href="bitacora.html">Bitácora</a>
+        </nav>
+        <!-- <input type="text" class="input_buscador" placeholder="Buscar"> -->
+        <p id="msg_bienvenido">Bienvenido, <span id="usuario">Jhonny</span></p>
+        <div class="dropdown">
+            <i class="fas fa-chevron-down" id="dropdown_btn"></i>
+            <div class="dropdown_content" id="my_dropdown">
+                <a href="perfil.html">Perfil</a>
+                <a href="cambiar_contrasena.html">Cambiar contraseña</a>
+                <a href="">Cerrar sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="contenido">
+        <h1>Registrar usuario</h1>
+
+        <form id="formulario_registro" class="form form_columnas">
+            <!-- Columna izquierda -->
+            <div class="col_izq">
+                <!-- Tipo de usuario -->
+                <div class="form_control">
+                    <label for="txt_tipoUsuario">Tipo de usuario</label>
+                    <select name="tipo_usuario" class="form_input" id="txt_tipoUsuario">
+                        <option value="" selected disabled>Seleccionar tipo de usuario</option>
+                        <option value="Empresario jurídico">Empresario jurídico</option>
+                        <option value="Empresario físico">Empresario físico</option>
+                        <option value="Cliente">Cliente</option>
+                    </select>
+                </div>
+                <!-- Identificación -->
+                <div class="form_control ocultar">
+                    <label for="txt_identificacion">Identificación</label>
+                    <input type="text" name="identificacion" class="form_input" id="txt_identificacion">
+                </div>
+                <!-- Nombre de la empresa -->
+                <div class="form_control ocultar">
+                    <label for="txt_nombreEmpresa">Nombre de la empresa</label>
+                    <input type="text" name="nombre_empresa" class="form_input" id="txt_nombreEmpresa">
+                </div>
+                <!-- Nombre -->
+                <div class="form_control ocultar">
+                    <label for="txt_nombre">Nombre</label>
+                    <input type="text" name="nombre" class="form_input" id="txt_nombre">
+                </div>
+                <!-- Segundo nombre -->
+                <div class="form_control ocultar">
+                    <label for="txt_nombre">Segundo nombre</label>
+                    <input type="text" name="segundo_nombre" class="form_input" id="txt_segundoNombre">
+                </div>
+                <!-- Apellido -->
+                <div class="form_control ocultar">
+                    <label for="txt_apellido">Apellido</label>
+                    <input type="text" name="apellido" class="form_input" id="txt_apellido">
+                </div>
+                <!-- Segundo apellido -->
+                <div class="form_control ocultar">
+                    <label for="txt_segundoApellido">Segundo apellido</label>
+                    <input type="text" name="segundo_apellido" class="form_input" id="txt_segundoApellido">
+                </div>
+                <!-- Fecha de nacimiento -->
+                <div class="form_control ocultar">
+                    <label for="">Fecha de nacimiento</label>
+                    <input type="date" name="fecha_nacimiento" class="input_date" id="txt_fechaNacimiento">
+                </div>
+                <!-- Edad -->
+                <div class="form_control ocultar">
+                    <label for="txt_edad">Edad</label>
+                    <input type="number" name="edad" class="form_input" id="txt_edad" disabled>
+                </div>
+                <!-- Sexo -->
+                <div class="form_control ocultar">
+                    <label for="">Sexo</label>
+                    <div class="form_radio" id="form_sexo">
+                        <input type="radio" name="sexo" value="Masculino" id="rMasculino">
+                        <label for="rMasculino">Masculino</label>
+                    </div>
+                    <div class="form_radio" id="form_sexo">
+                        <input type="radio" name="sexo" value="Femenino" id="rFemenino">
+                        <label for="rFemenino">Femenino</label>
+                    </div>
+                </div>
+
+                <p class="form_mensaje ocultar" id="msg_campos">Por favor complete correctamente todos los campos marcados</p>
+                <p class="form_mensaje ocultar" id="msg_sexo">Seleccione un sexo</p>
+                <div class="form_botones ocultar">
+                    <button type="button" class="btn btn_registrar" id="btn_registrar">Registrar</button>
+                    <button type="button" class="btn btn_registrar" id="btn_cancelar">Cancelar</button>
+                </div>
+            </div>
+            
+            <!-- Columna derecha -->
+            <div class="col_der">
+                <!-- E-mail -->
+                <div class="form_control ocultar">
+                    <label for="txt_email">E-mail</label>
+                    <input type="text" name="email" class="form_input" id="txt_email">
+                </div>
+                <!-- Contraseña -->
+                <!-- <div class="form_control ocultar">
+                    <label for="txt_contrasena">Contraseña</label>
+                    <input type="text" name="contrasena" class="form_input" id="txt_contrasena">
+                </div> -->
+                <!-- Confirmar contraseña -->
+                <!-- <div class="form_control ocultar">
+                    <label for="txt_contrasena2">Confirmar contraseña</label>
+                    <input type="text" name="" class="form_input" id="txt_contrasena2">
+                </div> -->
+                <!-- Teléfono -->
+                <div class="form_control ocultar">
+                    <label for="txt_telefono">Teléfono</label>
+                    <input type="text" name="telefono" class="form_input" id="txt_telefono">
+                </div>
+                <!-- Dirección -->
+                <div class="form_control ocultar">
+                    <label for="txt_direccion">Dirección</label>
+                    <textarea name="direccion" id="txt_direccion"></textarea>
+                    <!-- <input type="text" name="direccion" class="form_input" id="txt_direccion"> -->
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- Scripts -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.11/dist/sweetalert2.all.min.js"></script>
+    <script src="js/usuarios/servicio.js"></script>
+    <script src="js/usuarios/controlador_registrar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

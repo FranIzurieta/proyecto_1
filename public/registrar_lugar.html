@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/style_registro_lugar.css"> -->
+    <!-- <link rel="stylesheet" href="css/style_etiquetas.css"> -->
+</head>
+<body>
+    <h1>Registrar un lugar</h1>
+    <section class="registro_lugar">
+        <form class="form">
+            <div class="col_izquierda">
+                <div class="form_control">
+                    <label for="nombre_lugar">Nombre</label>
+                    <input class="form_input" type="text" id="nombre_lugar">
+                </div>
+                <div class="form_control">
+                    <label for="descripcion_lugar" id="lbl_descripcion">Descripción</label>
+                    <textarea name="" id="descripcion_lugar"></textarea>
+                </div>
+                <div class="form_control">
+                    <label for="categoria_lugar">Categoría</label>
+                    <select class="form_input" name="categories" id="categoria_lugar">
+                        <option value="" hidden>Elija la categoría</option>
+                        <option value="Restaurante">Restaurante</option>
+                        <option value="Veterinaria">Veterinaria</option>
+                        <option value="Parque Nacional">Parque Nacional</option>
+                        <option value="Centros Educativos">Centros Educativos</option>
+                        <option value="Centros de ocio">Ocio</option>
+                        <option value="Night Club">Night Club</option>
+                    </select>
+                </div>
+                <!-- <div class="form_control"> -->
+                    <label for="">Etiquetas</label>
+                    <input class="form_input" type="text" id="etiquetas_lugar">
+                <!-- </div> -->
+                <div id="input_etiquetas" class="input_etiquetas" data-name="input_etiquetas">
+                    <!-- <span class="tag">CSS<span class="close"></span></span>
+                    <span class="tag">JavaScript<span class="close"></span></span>
+                    <span class="tag">HTML<span class="close"></span></span> -->
+                </div>
+                <div class="redes">
+                    <label for="" id="lbl_redes">Redes sociales</label>
+                    <div class="form_control">
+                        <input class="form_input" type="text" id="facebook" placeholder="Facebook (opcional)">
+                        <input class="form_input" type="text" id="twitter" placeholder="Twitter (opcional)">
+                        <input class="form_input" type="text" id="instagram" placeholder="Instagram (opcional)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col_derecha">
+                <div class="form_control">
+                    <label for="">Dirección</label>
+                    <select class="form_input" name="provincia" id="provincias"><option value="" hidden>Provincia</option></select>
+                    <select class="form_input" name="canton" id="cantones"><option value="">Cantón</option></select>
+                    <select class="form_input" name="distrito" id="distritos"><option value="">Distrito</option></select>
+                </div>
+                <div class="form_control">
+                    <label for="senas_lugar" id="lbl_senas">Señas</label>
+                    <textarea name="signals" id="senas_lugar"></textarea>
+                </div>
+                <div class="form_control">
+                    <label for="" id="lbl_ubicacion">Ubicación</label>
+                    <div id="mapa"></div>
+                      <input class="form_input" type="hidden" id="latitud" value="9.902762">
+                      <input class="form_input" type="hidden" id="longitud" value="-84.101652">
+                </div>
+            </div>
+        </form>
+        <!-- <div id="img">Foto</div> -->
+        <!-- <div class="imagenes">
+            <img src="img/parque-diversiones.jpg" alt="" id="img">
+            <img src="img/parque-diversiones.jpg" alt="" id="img">
+            <img src="img/parque-diversiones.jpg" alt="" id="img">
+        </div> -->
+        <button type="button" id="btn_img">Subir foto</button>
+        <div class="botones">
+            <button type="button" id="btn_registrar">Registrar</button>
+            <button type="button" id="btn_cancelar">Cancelar</button>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="js/lugares/jquery-3.3.1.js"></script>
+    <script src="js/lugares/servicio_lugares.js"></script>
+    <script src="js/lugares/servicio_lugares_CostaRica.js"></script>
+    <script src="js/lugares/controlador_registro_lugares.js"></script>
+    <script src="js/lugares/controlador_lugares_CostaRica.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQSrrB_vyRukFOkul1HqvmyJ0GpPE1Agk&callback=initMap"></script>
+    <script src="js/lugares/mapa.js"></script>
+</body> 
+</html>
